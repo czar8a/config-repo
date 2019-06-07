@@ -1,0 +1,21 @@
+service:  
+  # datasource
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: PASARELA
+    password: pruebas2019
+    url:jdbc:oracle: thin:@172.16.1.68:1522:MENDESA    
+    #url=jdbc:oracle:thin:@men.eastus.cloudapp.azure.com:1522:MENDESA
+    
+# connection pooling
+    tomcat:
+      max:
+        wait: 20000
+        active: 50
+        max-idle: 20
+        min-idle: 15
+
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
